@@ -24,8 +24,10 @@ p {
   padding: 10px;
   margin-bottom: 1rem;
   width: 50%;
+  border-radius: 5px;
 }
 
 #messaging-area {
   background-image: url(../img-bolzapp/background.png);
+  height: 75vh;
 }
