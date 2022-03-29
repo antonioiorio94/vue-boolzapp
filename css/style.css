@@ -4,6 +4,9 @@
   margin: 0;
 }
 
+p {
+  margin-bottom: 0 !important;
+}
 .background {
   width: 100vw;
   height: 100vh;
@@ -14,4 +17,15 @@
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
+}
+
+.text-message {
+  background-color: rgb(149, 196, 149);
+  padding: 10px;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+#messaging-area {
+  background-image: url(../img-bolzapp/background.png);
 }
