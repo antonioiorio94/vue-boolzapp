@@ -117,11 +117,11 @@
             <!--Messaging area-->
             <div id="messaging-area" class="row bg-primary">
               <div class="p-5">
-                <div class="text-message offset-5">
-                  <p>Hai portato a spasso il cane?</p>
-                </div>
-                <div class="text-message offset-5">
-                  <p>Ricordati di stendere i panni</p>
+                <div
+                  class="text-message offset-5"
+                  v-for="(message,index) in contacts[0].messages"
+                >
+                  <p>{{message.message}}</p>
                 </div>
               </div>
             </div>

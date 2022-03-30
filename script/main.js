@@ -172,21 +172,24 @@ const contacts = [
 
 const app = new Vue({
   el: "#app",
-  data: { contacts, selectedContactIndex: undefined, contact: "" },
+  data: {
+    contacts,
+    selectedContactIndex: undefined,
+    contact: "",
+  },
   methods: {
     avatarImg(index) {
       return `img-bolzapp/avatar${contacts[index].avatar}.jpg `;
     },
 
     selectedContact(element, index) {
-      this.selectedContact = index;
+      this.selectedContactIndex = index;
       this.contact = element;
-      console.log(this.selectedContact);
+      console.log(this.selectedContactIndex);
       console.log(this.contact);
     },
     lastRecivedMessage(element, index) {
       const messages = element.messages;
-      console.log(messages);
 
       return messages[messages.length - 1].message;
     },
