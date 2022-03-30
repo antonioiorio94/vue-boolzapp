@@ -7,6 +7,12 @@
 p {
   margin-bottom: 0 !important;
 }
+
+i {
+  color: lightgrey;
+  font-size: larger;
+}
+
 .background {
   width: 100vw;
   height: 100vh;
@@ -38,4 +44,10 @@ p {
 #messaging-area {
   background-image: url(../img-bolzapp/background.png);
   height: 75vh;
+}
+
+#notification-bell {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
 }
