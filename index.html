@@ -118,10 +118,18 @@
             <div id="messaging-area" class="row bg-primary">
               <div class="p-5">
                 <div
-                  class="text-message offset-5"
+                  class="text-message"
                   v-for="(message,index) in contacts[selectedContactIndex].messages"
                 >
-                  <p>{{message.message}}</p>
+                  <p
+                    v-if="message.status === 'sent'"
+                    class="sent-message text-message offset-10"
+                  >
+                    {{message.message}}
+                  </p>
+                  <p v-else="" class="recived-message text-message">
+                    {{message.message}}
+                  </p>
                 </div>
               </div>
             </div>
