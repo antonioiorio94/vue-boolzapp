@@ -12,7 +12,9 @@ p {
   height: 100vh;
   background-color: rgb(247, 239, 230);
 }
-
+.bg-sky {
+  background-color: #8edafc;
+}
 .avatar-img {
   width: 4rem;
   height: 4rem;

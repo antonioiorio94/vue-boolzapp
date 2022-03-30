@@ -46,7 +46,7 @@
             <!--/Header-->
 
             <!--Area attiva notifiche-->
-            <div class="row bg-secondary align-items-center p-2">
+            <div class="row align-items-center p-2 bg-sky">
               <div class="col-2 p-2">
                 <i class="fa-solid fa-bell-slash"></i>
               </div>
@@ -68,7 +68,11 @@
             </div>
             <!--Container contatti-->
             <div class="container-fluid">
-              <div class="row p-2" v-for="(contact, index) in contacts">
+              <div
+                class="row p-2"
+                v-for="(contact, index) in contacts"
+                @click="selectedContact(contact, index)"
+              >
                 <div class="col-3">
                   <img
                     class="avatar-img"
@@ -78,7 +82,7 @@
                 </div>
                 <div class="col-9">
                   <h5>{{contact.name}}</h5>
-                  <p>Ultimo messaggio</p>
+                  <p>{{lastRecivedMessage(contact, index)}}</p>
                 </div>
               </div>
             </div>
@@ -92,16 +96,16 @@
           <div class="col-7 bg-light">
             <!--header-right-->
             <div class="row d-flex align-items-center p-2 mb-2 bg-light">
-              <div class="col-3 d-flex align-items-center">
+              <div class="col-1">
                 <img
                   class="avatar-img"
                   src="/img-bolzapp/avatar_3.jpg"
                   alt="avatar_img"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-5">
                 <h5>Michele</h5>
-                <p>Ultimo messaggio</p>
+                <p>Ultimo accesso, oggi alle 03:12</p>
               </div>
               <div class="col-6 d-flex justify-content-end">
                 <i class="fa-solid fa-magnifying-glass mx-2"></i>
