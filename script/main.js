@@ -179,7 +179,7 @@ const app = new Vue({
   },
   methods: {
     avatarImg(index) {
-      return `img-bolzapp/avatar${contacts[index].avatar}.jpg `;
+      return `/img-bolzapp/avatar${contacts[index].avatar}.jpg `;
     },
 
     selectedContact(element, index) {

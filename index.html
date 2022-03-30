@@ -99,12 +99,12 @@
               <div class="col-1">
                 <img
                   class="avatar-img"
-                  src="/img-bolzapp/avatar_3.jpg"
+                  :src="avatarImg(selectedContactIndex)"
                   alt="avatar_img"
                 />
               </div>
               <div class="col-5">
-                <h5>Michele</h5>
+                <h5>{{contacts[selectedContactIndex].name}}</h5>
                 <p>Ultimo accesso, oggi alle 03:12</p>
               </div>
               <div class="col-6 d-flex justify-content-end">
