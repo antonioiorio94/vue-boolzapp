@@ -174,7 +174,7 @@ const app = new Vue({
   el: "#app",
   data: {
     contacts,
-    selectedContactIndex: undefined,
+    selectedContactIndex: 0,
     contact: "",
   },
   methods: {
