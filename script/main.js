@@ -175,7 +175,8 @@ const app = new Vue({
   data: {
     contacts,
     selectedContactIndex: 0,
-    contact: "",
+    activeContact: contacts[0],
+    newMessage: "",
   },
   methods: {
     avatarImg(index) {
@@ -184,14 +185,32 @@ const app = new Vue({
 
     selectedContact(element, index) {
       this.selectedContactIndex = index;
-      this.contact = element;
-      console.log(this.selectedContactIndex);
-      console.log(this.contact);
+      this.activeContact = element;
+      //console.log(this.selectedContactIndex);
     },
     lastRecivedMessage(element, index) {
       const messages = element.messages;
 
       return messages[messages.length - 1].message;
+    },
+    sendNewMessage() {
+      //console.log(this.newMessage);
+      //console.log(this.activeContact);
+      if (this.newMessage.length > 0) {
+        this.activeContact.messages.push({
+          date: "",
+          message: this.newMessage,
+          status: "sent",
+        });
+        setTimeout(() => {
+          this.activeContact.messages.push({
+            date: "",
+            message: "Ok",
+            status: "received",
+          });
+        }, 1000);
+        this.newMessage = "";
+      }
     },
   },
 });
