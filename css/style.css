@@ -41,6 +41,10 @@ i {
   background-color: #fff;
 }
 
+.selected-contact {
+  background-color: aqua;
+}
+
 #messaging-area {
   background-image: url(../img-bolzapp/background.png);
   height: 75vh;

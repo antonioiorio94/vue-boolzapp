@@ -178,6 +178,7 @@ const app = new Vue({
     activeContact: contacts[0],
     newMessage: "",
     searchBarInput: "",
+    contactHighligth: "",
   },
   methods: {
     avatarImg(index) {
@@ -187,7 +188,13 @@ const app = new Vue({
     selectedContact(element, index) {
       this.selectedContactIndex = index;
       this.activeContact = element;
-      //console.log(this.selectedContactIndex);
+      /* prova aggiunta classe contatto selezionato// non funziona!!
+      if (this.selectedContactIndex) {
+        const highligth = document.getElementById("contact");
+        highligth.classList.add("selected-contact");
+      }
+
+      console.log(this.selectedContactIndex);*/
     },
     lastRecivedMessage(element, index) {
       const messages = element.messages;
