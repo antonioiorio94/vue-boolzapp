@@ -31,7 +31,7 @@
               <div class="col-6 d-flex align-items-center">
                 <img
                   class="avatar-img mx-2"
-                  src="/img-bolzapp/avatar_1.jpg"
+                  src="img-bolzapp/avatar_1.jpg"
                   alt="user_avatar"
                 />
                 <p>Antonio</p>
@@ -124,19 +124,28 @@
             <!--Messaging area-->
             <div id="messaging-area" class="row bg-primary">
               <div class="p-5">
-                <div
-                  class="text-message"
-                  v-for="(message,index) in contacts[selectedContactIndex].messages"
-                >
-                  <p
-                    v-if="message.status === 'sent'"
-                    class="sent-message text-message offset-10"
+                <div class="d-flex flex-column align-items-end">
+                  <div
+                    class="text-message"
+                    v-for="(message,index) in contacts[selectedContactIndex].messages"
                   >
-                    {{message.message}}
-                  </p>
-                  <p v-else="" class="recived-message text-message">
-                    {{message.message}}
-                  </p>
+                    <p
+                      v-if="message.status === 'sent'"
+                      class="sent-message text-message"
+                    >
+                      {{message.message}}<i
+                        class="fa-solid fa-angle-down"
+                        id="dropdwon-icon"
+                      ></i>
+                    </p>
+
+                    <p v-else="" class="recived-message text-message">
+                      {{message.message}}<i
+                        class="fa-solid fa-angle-down"
+                        id="dropdwon-icon"
+                      ></i>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -167,6 +176,6 @@
         </div>
       </div>
     </div>
-    <script src="/script/main.js"></script>
+    <script src="script/main.js"></script>
   </body>
 </html>

@@ -31,7 +31,7 @@ i {
   padding: 10px;
   margin-bottom: 1rem;
   border-radius: 10px;
-  width: 70%;
+  width: fit-content;
 }
 
 .sent-message {
@@ -39,6 +39,7 @@ i {
 }
 .recived-message {
   background-color: #fff;
+  align-self: flex-start;
 }
 
 .selected-contact {
@@ -54,4 +55,9 @@ i {
   background-color: #fff;
   padding: 20px;
   border-radius: 50%;
+}
+
+#dropdwon-icon {
+  color: gray;
+  margin-left: 1rem;
 }
