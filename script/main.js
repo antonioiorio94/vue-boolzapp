@@ -177,6 +177,7 @@ const app = new Vue({
     selectedContactIndex: 0,
     activeContact: contacts[0],
     newMessage: "",
+    searchBarInput: "",
   },
   methods: {
     avatarImg(index) {
@@ -193,6 +194,7 @@ const app = new Vue({
 
       return messages[messages.length - 1].message;
     },
+    //funzione pert l'invio di un nuovo messaggio e risposta automatica dopo un secondo
     sendNewMessage() {
       //console.log(this.newMessage);
       //console.log(this.activeContact);
@@ -211,6 +213,19 @@ const app = new Vue({
         }, 1000);
         this.newMessage = "";
       }
+    },
+    //funzione per la ricerca utenti
+    utenteRicercato() {
+      this.contacts.forEach((element) => {
+        const nome = element.name.toLowerCase();
+        //console.log(nome);
+        if (nome.includes(this.searchBarInput)) {
+          element.visible = true;
+        } else {
+          element.visible = false;
+        }
+        //console.log(element.visible);
+      });
     },
   },
 });
