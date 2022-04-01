@@ -36,10 +36,10 @@ i {
 
 .sent-message {
   background-color: rgb(149, 196, 149);
+  align-self: flex-end;
 }
 .recived-message {
   background-color: #fff;
-  align-self: flex-start;
 }
 
 .selected-contact {

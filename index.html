@@ -124,28 +124,24 @@
             <!--Messaging area-->
             <div id="messaging-area" class="row bg-primary">
               <div class="p-5">
-                <div class="d-flex flex-column align-items-end">
-                  <div
-                    class="text-message"
+                <div class="d-flex flex-column">
+                  <p
                     v-for="(message,index) in contacts[selectedContactIndex].messages"
+                    v-if="message.status === 'sent'"
+                    class="sent-message text-message mb-3"
                   >
-                    <p
-                      v-if="message.status === 'sent'"
-                      class="sent-message text-message"
-                    >
-                      {{message.message}}<i
-                        class="fa-solid fa-angle-down"
-                        id="dropdwon-icon"
-                      ></i>
-                    </p>
+                    {{message.message}}<i
+                      class="fa-solid fa-angle-down"
+                      id="dropdwon-icon"
+                    ></i>
+                  </p>
 
-                    <p v-else="" class="recived-message text-message">
-                      {{message.message}}<i
-                        class="fa-solid fa-angle-down"
-                        id="dropdwon-icon"
-                      ></i>
-                    </p>
-                  </div>
+                  <p class="recived-message text-message mb-3" v-else="">
+                    {{message.message}}<i
+                      class="fa-solid fa-angle-down"
+                      id="dropdwon-icon"
+                    ></i>
+                  </p>
                 </div>
               </div>
             </div>
@@ -176,6 +172,7 @@
         </div>
       </div>
     </div>
+
     <script src="script/main.js"></script>
   </body>
 </html>
